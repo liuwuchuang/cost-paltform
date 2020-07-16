@@ -182,7 +182,7 @@ public class UserServiceImpl implements UserService{
 		}
 		Query query = new Query();
 		// 总条数
-		long totalCount = mongoTemplate.count(query, CostDict.class);
+		long totalCount = mongoTemplate.count(query, User.class);
 		// 数据总页数
 		long totalPage = (totalCount % pageSize == 0 ? totalCount / pageSize : totalCount / pageSize + 1);
 		// 分页查询
